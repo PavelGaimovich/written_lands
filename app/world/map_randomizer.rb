@@ -1,4 +1,4 @@
-class Map::Randomizer
+class World::MapRandomizer
   PLACES = {
     forest: ['tree', 'light_tree', 'big_tree']
   }

@@ -1,4 +1,4 @@
-blocks:
+cells:
   road:
     symbol: '_'
     color: 'yellow'
