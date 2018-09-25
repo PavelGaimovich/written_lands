@@ -1,0 +1,16 @@
+blocks:
+  road:
+    symbol: '_'
+    color: 'yellow'
+  rock:
+    symbol: 'o'
+    color: 'gray'
+  tree:
+    symbol: 't'
+    color: 'green'
+  big_tree:
+    symbol: 'T'
+    color: 'green'
+  light_tree:
+    symbol: 't'
+    color: 'light_green'
