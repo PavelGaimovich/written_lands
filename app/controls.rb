@@ -7,7 +7,7 @@ class Controls
     "\e[C" => "right",
     "\e[D" => "left"
   }
-  COMMANDS.default = "do nothing"
+  COMMANDS.default = "nothing"
 
   # Reads keypresses from the user including 2 and 3 escape character sequences.
   def self.read_char
@@ -30,6 +30,8 @@ class Controls
   # http://www.alecjacobson.com/weblog/?p=75
   def self.read_key
     c = read_char
+
+    exit 0 if c == "\u0003"
 
     return COMMANDS[c]
 

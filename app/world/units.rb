@@ -1,6 +1,3 @@
-require 'forwardable'
-require 'singleton'
-
 class World::Units
   extend Forwardable
   include Singleton

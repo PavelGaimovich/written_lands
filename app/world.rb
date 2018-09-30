@@ -17,9 +17,4 @@ class World
       puts row.join('')
     end
   end
-  #
-  # def read_keys
-  #   command = Controls.read_key
-  #   @map.player_event(command)
-  # end
 end
