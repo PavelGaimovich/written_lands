@@ -8,12 +8,18 @@ class World
   # end
 
   def initialize
-    @map = World::Maps::GreatRoadStarting.new.draw
+    @map = World::Maps::GreatRoadStarting.new
   end
 
   def print
-    @map.each do |row|
+    puts `clear`
+    @map.marking.each do |row|
       puts row.join('')
     end
   end
+  #
+  # def read_keys
+  #   command = Controls.read_key
+  #   @map.player_event(command)
+  # end
 end
