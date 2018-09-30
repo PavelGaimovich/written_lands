@@ -12,11 +12,4 @@ class World
   def initialize
     @current_map = World::Maps::GreatRoadStarting.new
   end
-
-  def print
-    puts `clear`
-    @current_map.marking.each do |row|
-      puts row.join('')
-    end
-  end
 end

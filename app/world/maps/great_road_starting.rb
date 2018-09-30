@@ -18,5 +18,12 @@ class World::Maps::GreatRoadStarting < World::Maps::Base
 
     u(:goblin).place(6, 1)
     u(:player).place(6, 5)
+
+    @start_text = <<~HEREDOC
+      Hello traveller!
+
+      Welcome to Written lands! Your journey starts today!
+      Use arrow keys to move
+    HEREDOC
   end
 end

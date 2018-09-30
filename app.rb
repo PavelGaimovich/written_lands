@@ -21,7 +21,7 @@ class App
     @world = World.instance
 
     while true do
-      @world.print
+      @world.current_map.print
       World::Units::Player.instance.send(Controls.read_key.to_sym)
     end
   end
