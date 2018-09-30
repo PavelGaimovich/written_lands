@@ -18,10 +18,10 @@ require_relative 'app/controls'
 
 class App
   def initialize
-    @map = World.new
+    @world = World.instance
 
     while true do
-      @map.print
+      @world.print
       World::Units::Player.instance.send(Controls.read_key.to_sym)
     end
   end

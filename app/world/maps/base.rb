@@ -1,5 +1,5 @@
 class World::Maps::Base
-  attr_accessor :map
+  attr_accessor :positions
 
   def u(name)
     return World::Units::Player.instance if name == :player
@@ -11,14 +11,14 @@ class World::Maps::Base
   end
 
   def marking
-    full_map = []
-    map.each do |row|
-      full_map << row.dup
+    map = []
+    positions.each do |row|
+      map << row.dup
     end
 
     World::Units.instance.each do |unit|
-      full_map[unit.y][unit.x] = unit
+      map[unit.y][unit.x] = unit
     end
-    full_map
+    map
   end
 end

@@ -2,7 +2,8 @@ class World::Cells::Factory
   def self.build(name)
     OpenStruct.new(
       color: cells[name.to_s]['color'],
-      symbol: cells[name.to_s]['symbol']
+      symbol: cells[name.to_s]['symbol'],
+      impassable: cells[name.to_s]['impassable']
     ).extend(World::Cells::Base)
   end
 

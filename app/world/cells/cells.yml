@@ -5,12 +5,16 @@ cells:
   rock:
     symbol: 'o'
     color: 'gray'
+    impassable: true
   tree:
     symbol: 't'
     color: 'green'
+    impassable: true
   big_tree:
     symbol: 'T'
     color: 'green'
+    impassable: true
   light_tree:
     symbol: 't'
     color: 'light_green'
+    impassable: true

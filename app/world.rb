@@ -1,5 +1,7 @@
 class World
-  attr_accessor :map
+  include Singleton
+
+  attr_accessor :current_map
 
   # TODO: Think about randomizer
   # def initialize(rows = 5, cols = 5)
@@ -8,12 +10,12 @@ class World
   # end
 
   def initialize
-    @map = World::Maps::GreatRoadStarting.new
+    @current_map = World::Maps::GreatRoadStarting.new
   end
 
   def print
     puts `clear`
-    @map.marking.each do |row|
+    @current_map.marking.each do |row|
       puts row.join('')
     end
   end

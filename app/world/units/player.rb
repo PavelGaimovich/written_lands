@@ -6,20 +6,35 @@ class World::Units::Player < World::Units::Base
   end
 
   def up
-    self.y -= 1
+    next_place(@x, @y -1)
   end
 
   def right
-    self.x += 1
+    next_place(@x + 1, @y)
   end
 
   def down
-    self.y += 1
+    next_place(@x, @y + 1)
   end
 
   def left
-    self.x -= 1
+    next_place(@x - 1, @y)
   end
 
   def nothing; end
+
+  def next_place(x,y)
+    map = World.instance.current_map.positions
+
+    if y >= map.size ||
+      y < 0 ||
+      x >= map[0].size ||
+      x < 0 ||
+      map[y][x].impassable == true
+
+      return
+    end
+
+    place(x,y)
+  end
 end

@@ -5,7 +5,7 @@ class World::Maps::GreatRoadStarting < World::Maps::Base
     b = c(:big_tree)
     l = c(:light_tree)
 
-    @map =
+    @positions =
       [
         [t, r, r, r, r, r, r, r, r, r, r, l, b],
         [t, b, r, r, r, r, r, r, r, r, r, r, t],
