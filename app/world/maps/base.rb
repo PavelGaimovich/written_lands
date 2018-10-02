@@ -1,9 +1,9 @@
 class World::Maps::Base
   attr_accessor :positions, :start_text
 
-  def u(name)
+  def u(name, **args)
     return World::Units::Player.instance if name == :player
-    Object.const_get("World::Units::#{ name.capitalize }").new()
+    Object.const_get("World::Units::#{ name.capitalize }").new(args)
   end
 
   def c(name)
@@ -16,6 +16,8 @@ class World::Maps::Base
     marking.each { |row| puts row.join('') }
     puts ''
     puts start_text
+    puts ''
+    puts 'You'.colorize(:blue) << ' see ' << World::Units.instance.to_s
   end
 
   def marking

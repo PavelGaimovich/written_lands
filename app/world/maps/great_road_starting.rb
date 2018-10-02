@@ -16,7 +16,7 @@ class World::Maps::GreatRoadStarting < World::Maps::Base
         [t, b, r, r, r, r, r, r, r, r, r, r, t],
       ]
 
-    u(:goblin).place(6, 1)
+    u(:goblin, name: 'Creyg').place(6, 1)
     u(:player).place(6, 5)
 
     @start_text = <<~HEREDOC

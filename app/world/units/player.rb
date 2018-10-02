@@ -1,8 +1,16 @@
 class World::Units::Player < World::Units::Base
   include Singleton
 
-  def to_s
-    'p'.to_s.colorize(:blue)
+  def symbol
+    'p'
+  end
+
+  def default_color
+    :blue
+  end
+
+  def formatted_name
+    nil
   end
 
   def up
