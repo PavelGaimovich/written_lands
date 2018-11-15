@@ -5,7 +5,8 @@ class Controls
     "\e[A" => "up",
     "\e[B" => "down",
     "\e[C" => "right",
-    "\e[D" => "left"
+    "\e[D" => "left",
+    "\r" => "enter"
   }
   COMMANDS.default = "nothing"
 

@@ -13,6 +13,11 @@ class World::Units::Player < World::Units::Base
     nil
   end
 
+  def make(move)
+    return if move == :enter
+    send(move)
+  end
+
   def up
     next_place(@x, @y -1)
   end
@@ -43,6 +48,11 @@ class World::Units::Player < World::Units::Base
       return
     end
 
-    place(x,y)
+    return if action(x, y)
+    place(x, y)
+  end
+
+  def action(x, y)
+    World.instance.current_map.marking[y][x].action
   end
 end

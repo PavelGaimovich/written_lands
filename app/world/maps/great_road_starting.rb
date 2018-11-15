@@ -16,14 +16,24 @@ class World::Maps::GreatRoadStarting < World::Maps::Base
         [t, b, r, r, r, r, r, r, r, r, r, r, t],
       ]
 
-    u(:goblin, name: 'Creyg').place(6, 1)
+    creig = u(:goblin, name: 'Creyg')
+    creig.place(6, 1)
+
+    def creig.action
+      World::Quests::Creig.start
+      true
+    end
+
     u(:player).place(6, 5)
 
-    @start_text = <<~HEREDOC
+    @map_text = []
+    @map_text << <<~HEREDOC
       Hello traveller!
 
       Welcome to Written lands! Your journey starts today!
       Use arrow keys to move
+
+      CTRL + C - to exit program
     HEREDOC
   end
 end

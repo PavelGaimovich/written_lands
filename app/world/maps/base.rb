@@ -1,5 +1,5 @@
 class World::Maps::Base
-  attr_accessor :positions, :start_text
+  attr_accessor :positions, :start_text, :map_text
 
   def u(name, **args)
     return World::Units::Player.instance if name == :player
@@ -14,10 +14,12 @@ class World::Maps::Base
     puts `clear`
 
     marking.each { |row| puts row.join('') }
-    puts ''
-    puts start_text
+
     puts ''
     puts 'You'.colorize(:blue) << ' see ' << World::Units.instance.to_s
+    puts ''
+
+    puts map_text.join("\n")
   end
 
   def marking

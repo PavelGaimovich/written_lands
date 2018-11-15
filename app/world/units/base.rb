@@ -30,4 +30,8 @@ class World::Units::Base
   def default_color
     :gray
   end
+
+  def action
+    false
+  end
 end

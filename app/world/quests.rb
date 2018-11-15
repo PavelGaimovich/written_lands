@@ -1,0 +1,2 @@
+module World::Quests
+end

@@ -1,7 +1,7 @@
 class World
   include Singleton
 
-  attr_accessor :current_map
+  attr_accessor :current_map, :player
 
   # TODO: Think about randomizer
   # def initialize(rows = 5, cols = 5)
@@ -11,5 +11,9 @@ class World
 
   def initialize
     @current_map = World::Maps::GreatRoadStarting.new
+  end
+
+  def player
+    World::Units::Player.instance
   end
 end
