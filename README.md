@@ -6,6 +6,9 @@ Written lands is experiment to create simple, easy to read game base for console
 
 You can make pull requests and free add your maps, cells and units.
 
+### Controls
+Keyboard keys: Up, Down, Left, Right.
+
 ### Example how add Map
 ```ruby
 class World::Maps::GreatRoadStarting < World::Maps::Base

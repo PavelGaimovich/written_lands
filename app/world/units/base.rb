@@ -3,7 +3,6 @@ class World::Units::Base
   attr_reader :name
 
   def initialize(name: nil)
-    World::Units.instance.push(self)
     @name = name
     @color = default_color
   end
@@ -32,6 +31,6 @@ class World::Units::Base
   end
 
   def action
-    false
+    true
   end
 end

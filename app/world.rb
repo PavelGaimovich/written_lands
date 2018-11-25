@@ -9,10 +9,6 @@ class World
   #   @map = Map::Randomizer.randomize(@map)
   # end
 
-  def initialize
-    @current_map = World::Maps::GreatRoadStarting.new
-  end
-
   def player
     World::Units::Player.instance
   end

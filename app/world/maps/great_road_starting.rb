@@ -5,9 +5,15 @@ class World::Maps::GreatRoadStarting < World::Maps::Base
     b = c(:big_tree)
     l = c(:light_tree)
 
+    n = c(:road)
+
+    def n.action
+      World::Maps::GreatRoadStarting::Part1.new.load
+    end
+
     @positions =
       [
-        [t, r, r, r, r, r, r, r, r, r, r, l, b],
+        [t, r, n, n, n, n, n, n, n, n, n, l, b],
         [t, b, r, r, r, r, r, r, r, r, r, r, t],
         [l, r, r, r, r, r, r, r, r, r, r, b, t],
         [t, l, r, r, r, r, r, r, r, r, r, r, l],
@@ -15,16 +21,6 @@ class World::Maps::GreatRoadStarting < World::Maps::Base
         [t, r, r, r, r, r, r, r, r, r, r, l, b],
         [t, b, r, r, r, r, r, r, r, r, r, r, t],
       ]
-
-    creig = u(:goblin, name: 'Creyg')
-    creig.place(6, 1)
-
-    def creig.action
-      World::Quests::Creig.start
-      true
-    end
-
-    u(:player).place(6, 5)
 
     @map_text = []
     @map_text << <<~HEREDOC
@@ -35,5 +31,10 @@ class World::Maps::GreatRoadStarting < World::Maps::Base
 
       CTRL + C - to exit program
     HEREDOC
+  end
+
+  def place_units
+    u(:player).place(6, 5)
+    u(:creig).place(6, 1)
   end
 end

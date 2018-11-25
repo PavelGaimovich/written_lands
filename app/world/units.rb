@@ -2,7 +2,7 @@ class World::Units
   extend Forwardable
   include Singleton
 
-  def_delegator :@units, :each
+  def_delegators :@units, :each, :clear
 
   def initialize
     @units = []

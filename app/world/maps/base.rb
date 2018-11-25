@@ -2,8 +2,16 @@ class World::Maps::Base
   attr_accessor :positions, :start_text, :map_text
 
   def u(name, **args)
-    return World::Units::Player.instance if name == :player
-    Object.const_get("World::Units::#{ name.capitalize }").new(args)
+    # TODO: Do something with this if
+    if name == :player
+      unit = World::Units::Player.instance
+    else
+      unit = Object.const_get("World::Units::#{ name.capitalize }").new(args)
+    end
+
+    World::Units.instance.push(unit)
+
+    unit
   end
 
   def c(name)
@@ -36,5 +44,15 @@ class World::Maps::Base
     positions.map do |row|
       row.dup
     end
+  end
+
+  def load
+    World.instance.current_map = self
+    World::Units.instance.clear
+    place_units
+  end
+
+  def place_units
+
   end
 end

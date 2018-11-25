@@ -18,3 +18,10 @@ cells:
     symbol: 't'
     color: 'light_green'
     impassable: true
+  water:
+    symbol: '_'
+    color: 'light_blue'
+    impassable: true
+  sign:
+    symbol: 'T'
+    color: 'brown'
