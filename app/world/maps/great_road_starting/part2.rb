@@ -10,16 +10,15 @@ class World::Maps::GreatRoadStarting::Part2 < World::Maps::Base
 
     s1 = c(:sign)
 
-    # TODO: Clena this. Make separate object sign and make new type for cells - descridable
     def s1.action
-      SignLeft.start
+      World::Quests::Base.dialog('The Great Gray Castle')
       true
     end
 
     s2 = c(:sign)
 
     def s2.action
-      SignRight.start
+      World::Quests::Base.dialog('Red Carrots Village')
       true
     end
 
@@ -50,17 +49,5 @@ class World::Maps::GreatRoadStarting::Part2 < World::Maps::Base
 
   def place_units
     u(:player).place(15, 14)
-  end
-end
-
-class SignLeft < World::Quests::Base
-  def self.start
-    dialog('The Great Gray Castle')
-  end
-end
-
-class SignRight < World::Quests::Base
-  def self.start
-    dialog('Red Carrots Village')
   end
 end

@@ -6,4 +6,9 @@ class World::Units::Frog < World::Units::Base
   def default_color
     :green
   end
+
+  def action
+    World::Quests::Frog.start
+    true
+  end
 end
