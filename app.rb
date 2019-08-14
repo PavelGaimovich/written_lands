@@ -12,7 +12,9 @@ require_relative 'app/controls'
 
 class App
   def initialize
-    World::Maps::GreatRoadStarting.new.load
+    # World::Maps::GreatRoadStarting.new.load
+
+    World::Maps::GreatCastle::Ruins.new.load
 
     while true do
       World.instance.current_map.print

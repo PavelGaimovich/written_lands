@@ -22,9 +22,16 @@ class World::Maps::GreatRoadStarting::Part2 < World::Maps::Base
       true
     end
 
+    g = c(:road)
+
+    def g.action
+      World::Maps::GreatCastle::Ruins.new.load
+      true
+    end
+
     @positions =
       [
-        [t, t, t, r, r, r, t, t, l, b, l, t, t, t, l, t, l, b, r, r, r, t, b, t],
+        [t, t, t, g, g, g, t, t, l, b, l, t, t, t, l, t, l, b, r, r, r, t, b, t],
         [t, b, r, r, r, r, b, l, b, t, b, b, b, t, l, b, t, r, r, r, r, b, t, t],
         [l, r, r, r, r, r, r, r, t, b, t, l, t, b, r, r, r, r, r, r, r, r, l, b],
         [t, l, r, r, r, r, r, r, b, t, l, t, r, r, r, r, r, r, r, r, r, r, r, l],
