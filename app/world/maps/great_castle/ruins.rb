@@ -9,7 +9,7 @@ class World::Maps::GreatCastle::Ruins < World::Maps::Base
     n = c(:road)
 
     def n.action
-      World::Maps::GreatRoadStarting::Part1.new.load
+      World::Maps::GreatCastle::OldGates.new.load
     end
 
     forest_line1 = [b, t, t, b, l, l, t, b, t, t, b, l]
@@ -44,7 +44,7 @@ class World::Maps::GreatCastle::Ruins < World::Maps::Base
     @map_text << <<~HEREDOC
       Air changed flavor.
 
-      Sky became darker
+      Sky became darker.
     HEREDOC
   end
 

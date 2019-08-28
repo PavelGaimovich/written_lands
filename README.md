@@ -1,5 +1,12 @@
 # Game
 
+## TODO:
+1. Randomize forest!! Too much time for writting lands :D - Done
+2. Print became slower, need to think how fix that
+3. Think how to make Loop with maps and use Statuses
+4. Think how change map text by status
+
+
 ## Welcome to Written lands!
 
 Written lands is experiment to create simple, easy to read game base for console.

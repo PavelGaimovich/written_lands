@@ -4,7 +4,11 @@ cells:
     color: 'yellow'
   rock:
     symbol: 'o'
-    color: 'gray'
+    color: 'light_black'
+    impassable: true
+  big_rock:
+    symbol: 'O'
+    color: 'light_black'
     impassable: true
   tree:
     symbol: 't'

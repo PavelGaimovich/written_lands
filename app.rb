@@ -14,7 +14,7 @@ class App
   def initialize
     # World::Maps::GreatRoadStarting.new.load
 
-    World::Maps::GreatCastle::Ruins.new.load
+    World::Maps::GreatCastle::ForestRun.new.load
 
     while true do
       World.instance.current_map.print

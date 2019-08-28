@@ -23,9 +23,13 @@ class World::Maps::Base
 
     marking.each { |row| puts row.join('') }
 
-    puts ''
-    puts 'You'.colorize(:blue) << ' see ' << World::Units.instance.to_s
-    puts ''
+    visible_units_string = World::Units.instance.to_s
+
+    if visible_units_string != ""
+      puts ''
+      puts 'You'.colorize(:blue) << ' see ' << visible_units_string
+      puts ''
+    end
 
     puts map_text.join("\n")
   end
