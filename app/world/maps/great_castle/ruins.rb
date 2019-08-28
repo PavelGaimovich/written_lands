@@ -9,7 +9,7 @@ class World::Maps::GreatCastle::Ruins < World::Maps::Base
     n = c(:road)
 
     def n.action
-      World::Maps::GreatCastle::OldGates.new.load
+      World::Maps::GreatCastle::ForestRun.new.load
     end
 
     forest_line1 = [b, t, t, b, l, l, t, b, t, t, b, l]
